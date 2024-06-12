@@ -25,6 +25,10 @@ Fora internetowe są popularnymi miejscami do dyskusji online, gdzie użytkownic
 
 ## 3. Instalacja LAMP stack
 - Atkualizacja systemu
+```
+sudo apt update
+sudo apt upgrade
+```
 - Instalacja Apache
 - Instalacja MySQL
 - Instalacja PHP
