@@ -1,6 +1,6 @@
 # LAMP-stack
 
-1. Czym jest LAMP stack
+## 1. Czym jest LAMP stack?
 LAMP stack to akronim oznaczający zestaw oprogramowania wykorzystywanego do tworzenia dynamicznych stron internetowych i aplikacji. Skrót ten pochodzi od pierwszych liter czterech kluczowych komponentów, które tworzą LAMP stack:
 - Linux: System operacyjny na którym działają pozostałe elementy stosu. Linux jest znany ze swojej stabilności, bezpieczeństwa i otwartego kodu źródłowego.
 - Apache: Serwer HTTP, który obsługuje żądania przeglądarek internetowych i dostarcza strony internetowe do użytkowników. Apache jest jednym z najpopularniejszych serwerów WWW na świecie.
