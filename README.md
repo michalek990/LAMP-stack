@@ -54,7 +54,15 @@ GRANT ALL PRIVILAGES ON myapp.* TO 'myuser' @ 'localhost';
 
 FLUSH PRIVILAGES;
 ```
-
+- Struktura plików aplikacji
+```
+/var/www/html/myapp
+    ├── index.php
+    ├── config.php
+    ├── user.php
+    ├── css
+        └── styles.css
+```
 ## 4. Opis implementacji
 
 Podczas instalacji i konfiguracji LAMP stacka oraz wdrażania aplikacji PHP na Kubernetesie wykonaliśmy szereg kroków, które obejmowały instalację poszczególnych komponentów, konfigurację serwera oraz wdrożenie aplikacji. Na początku zainstalowaliśmy system operacyjny Linux, na przykład Ubuntu Server 20.04. Następnie przystąpiliśmy do instalacji serwera Apache za pomocą komendy sudo apt install apache2, a po jego uruchomieniu sprawdziliśmy, czy działa poprawnie.
