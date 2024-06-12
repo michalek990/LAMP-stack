@@ -30,9 +30,43 @@ sudo apt update
 sudo apt upgrade
 ```
 - Instalacja Apache
+```
+sudo apt install apache2
+```
 - Instalacja MySQL
+```
+sudo apt install mysql-server
+sudo mysql -u root -p
+```
 - Instalacja PHP
+```
+sudo apt install php libapache2-mod-php php-mysql
+sudo systemctl restart apache2
+```
 - Konfiguracja MySQL
+```
+<?php
+include 'config.php';
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, name FROM users";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close()
+?>
+```
 
 ## 4. Opis implementacji
 
