@@ -7,4 +7,4 @@ LAMP stack to akronim oznaczający zestaw oprogramowania wykorzystywanego do two
 - MySQL: System zarządzania relacyjnymi bazami danych (RDBMS), który przechowuje dane aplikacji. MySQL jest również oprogramowaniem open source i jest szeroko stosowany w różnych projektach.
 - PHP (czasami Perl lub Python): Język skryptowy stosowany do tworzenia dynamicznych treści stron internetowych. PHP działa na serwerze, wykonując kod, który generuje HTML wysyłany do przeglądarki użytkownika.
 ---
-</br> Podsumowując, LAMP stack to kompletny zestaw narzędzi programistycznych umożliwiających tworzenie, testowanie i wdrażanie aplikacji internetowych. Każdy z komponentów pełni określoną rolę, a razem tworzą solidną podstawę dla rozwoju nowoczesnych aplikacji webowych.
+Podsumowując, LAMP stack to kompletny zestaw narzędzi programistycznych umożliwiających tworzenie, testowanie i wdrażanie aplikacji internetowych. Każdy z komponentów pełni określoną rolę, a razem tworzą solidną podstawę dla rozwoju nowoczesnych aplikacji webowych.
