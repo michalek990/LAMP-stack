@@ -4,15 +4,12 @@ include 'config.php';
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
 
-    // Połączenie z bazą danych
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Sprawdzenie połączenia
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Pobranie danych użytkownika
     $sql = "SELECT * FROM users WHERE id = $id";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
@@ -24,10 +21,8 @@ if (isset($_GET['id'])) {
         $email = $_POST['email'];
         $bio = $_POST['bio'];
 
-        // Aktualizacja danych użytkownika
         $sql = "UPDATE users SET name='$name', surname='$surname', age='$age', email='$email' WHERE id=$id";
         if ($conn->query($sql) === TRUE) {
-            // Aktualizacja danych w tabeli profiles
             $sql_profile = "UPDATE profiles SET bio='$bio' WHERE user_id=$id";
             if ($conn->query($sql_profile) === TRUE) {
                 echo "User updated successfully";
@@ -40,7 +35,6 @@ if (isset($_GET['id'])) {
 
         $conn->close();
 
-        // Przekierowanie z powrotem do listy użytkowników
         header("Location: index.php");
         exit();
     }
