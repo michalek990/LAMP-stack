@@ -17,7 +17,7 @@ spec:
         image: mysql:5.7
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "your_password"  # Zmień na swoje hasło
+          value: "your_password" 
         - name: MYSQL_DATABASE
           value: "LampDb"
         ports:
