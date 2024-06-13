@@ -37,7 +37,7 @@ data:
     <?php
     $servername = "mysql-service";
     $username = "root";
-    $password = "your_password"; // Zmień na swoje hasło do MySQL
+    $password = "your_password"; 
     $dbname = "LampDb";
     ?>
 ---
