@@ -45,12 +45,12 @@ sudo systemctl restart apache2
 ```
 - Konfiguracja MySQL
 ```
-CREATE DATABASE myapp;
+CREATE DATABASE LampDb;
 
-CREATE USER 'myuser' @ 'localhost' IDENTIFIED BY
+CREATE USER 'grzeszuk' @ 'localhost' IDENTIFIED BY
 'mypassword';
 
-GRANT ALL PRIVILAGES ON myapp.* TO 'myuser' @ 'localhost';
+GRANT ALL PRIVILAGES ON LampDb.* TO 'grzeszuk' @ 'localhost';
 
 FLUSH PRIVILAGES;
 ```
@@ -62,6 +62,26 @@ FLUSH PRIVILAGES;
     ├── user.php
     ├── css
         └── styles.css
+```
+- Kod bazy danych
+```
+USE LampDb;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE profiles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    bio TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 ```
 ## 4. Opis implementacji
 
