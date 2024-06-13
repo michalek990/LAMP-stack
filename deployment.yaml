@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-php-app
+  labels:
+    app: my-php-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-php-app
+  template:
+    metadata:
+      labels:
+        app: my-php-app
+    spec:
+      containers:
+      - name: php-apache
+        image: my-php-app
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app-config
+          mountPath: /var/www/html/config.php
+          subPath: config.php
+      volumes:
+      - name: app-config
+        configMap:
+          name: app-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  config.php: |
+    <?php
+    $servername = "mysql-service";
+    $username = "root";
+    $password = "your_password"; // Zmień na swoje hasło do MySQL
+    $dbname = "LampDb";
+    ?>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-php-app-service
+spec:
+  selector:
+    app: my-php-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
