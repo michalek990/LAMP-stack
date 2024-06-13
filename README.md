@@ -77,7 +77,5 @@ Dla bazy danych MySQL stworzyliśmy plik mysql-deployment.yaml, który definiowa
 
 Na koniec sprawdziliśmy status wdrożonych podów i usług za pomocą kubectl get pods -n myapp i kubectl get services -n myapp, aby upewnić się, że wszystkie komponenty działają poprawnie. Użyliśmy zewnętrznego adresu IP wygenerowanego przez LoadBalancer, aby uzyskać dostęp do aplikacji.
 
-Podczas próby uruchomienia MySQL napotkaliśmy na problem związany z brakiem systemd jako systemu init. Aby obejść ten problem, użyliśmy komend sudo service mysql status i sudo service mysql start do zarządzania usługą MySQL. W przypadku dalszych problemów rozważaliśmy uruchomienie MySQL za pomocą Docker, co zapewniłoby bardziej niezawodne środowisko w różnych konfiguracjach systemowych.
-
 ## 5. Podsumowanie
 LAMP stack, składający się z Linux, Apache, MySQL i PHP, jest popularnym zestawem technologii używanym do budowy i hostowania dynamicznych stron internetowych. Proces instalacji obejmuje zainstalowanie serwera Apache do obsługi HTTP, MySQL jako systemu zarządzania bazą danych oraz PHP jako języka skryptowego do generowania dynamicznych treści. Po zainstalowaniu i skonfigurowaniu tych komponentów, wdrożyliśmy przykładową aplikację PHP, która łączy się z bazą danych MySQL i wyświetla dane na stronie internetowej. Dodatkowo, wdrożyliśmy aplikację na Kubernetesie, korzystając z plików YAML do zdefiniowania deploymentów, usług oraz persistent storage. Cały proces ilustruje, jak zbudować skalowalną i zarządzalną infrastrukturę do hostowania aplikacji internetowych.

@@ -14,7 +14,7 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MyApp</title>
+    <title>LAMP</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
