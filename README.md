@@ -56,12 +56,15 @@ FLUSH PRIVILAGES;
 ```
 - Struktura plików aplikacji
 ```
-/var/www/html/myapp
-    ├── index.php
+/var/www/html/LAMP
+    ├── add_user.php
     ├── config.php
-    ├── user.php
     ├── css
-        └── styles.css
+    │   └── styles.css
+    ├── delete_user.php
+    ├── edit_user.php
+    ├── index.php
+    └── user.php
 ```
 - Kod bazy danych
 ```
